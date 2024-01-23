@@ -234,6 +234,7 @@
 .main {
 	padding: 0 20px;
 	margin: 64px 0;
+	margin-bottom: 61px;
 	display: flex;
 	flex-direction: column;
 	gap: 80px;
