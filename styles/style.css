@@ -28,7 +28,7 @@
 @media (width < 768px) and (width >= 375px) {
 	.header {
 		display: grid;
-		grid-template-rows: 33vh 78vw 10rem;
+		grid-template-rows: 33vh 43vh 1vw 10rem;
 		margin: 0 6px;
 		align-items: center;
 		margin-right: 15px;
@@ -39,21 +39,21 @@
 	position: absolute;
 	color: var(--rec-color);
 	text-transform: uppercase;
-	top: 21px;
+	top: 22px;
 	right: 30px;
 }
 
 @media (width < 1024px) and (width >= 768px) {
 	.header__rec {
-		top: 12px;
+		top: 13px;
 		right: 30px;
 	}
 }
 
 @media (width < 768px) and (width >= 375px) {
 	.header__rec {
-		top: 11px;
-		right: 30px;
+		top: 9px;
+		right: 28px;
 	}
 }
 
@@ -74,6 +74,12 @@
 	padding-top: 20px;
 }
 
+@media (width < 1024px) and (width >= 768px) {
+	.header__theme-menu {
+		padding-top: 25px;
+	}
+}
+
 .header__theme-menu-list {
 	display: flex;
 	justify-content: center;
@@ -89,7 +95,7 @@
 
 @media (width < 768px) and (width >= 375px) {
 	.header__theme-menu-list {
-		gap: 11px;
+		gap: 13px;
 	}
 }
 
@@ -105,16 +111,22 @@
 	cursor: pointer;
 }
 
+.header__theme-menu-button:hover {
+	outline: var(--hover-color);
+}
+
 .header__theme-menu-button:focus {
 	outline: none;
 }
 
 .header__theme-menu-button:focus-visible {
-	border-bottom: 1px solid var(--corners-color);
+	border-bottom: var(--hover-color);
+	outline: none;
 }
 
 .header__theme-menu-button_active {
-	outline: 1px solid;
+	outline: 1px solid var(--corners-color);
+	pointer-events: none;
 }
 
 .header__theme_menu {
@@ -141,7 +153,8 @@
 
 @media (width < 1024px) and (width >= 768px) {
 	.header__title-container {
-		gap: 132px;
+		gap: 135px;
+		margin-top: 112px;
 	}
 }
 
@@ -195,6 +208,13 @@
 	bottom: 18px;
 }
 
+@media (width < 1024px) and (width >= 768px) {
+	.decorated-zone::before {
+		left: 0px;
+		bottom: 14px;
+	}
+}
+
 @media (width < 768px) and (width >= 375px) {
 	.decorated-zone::before {
 		left: 0px;
@@ -216,14 +236,14 @@
 @media (width < 1024px) and (width >= 768px) {
 	.decorated-zone::after {
 		right: 0px;
-		top: 10px;
+		top: 13px;
 	}
 }
 
 @media (width < 768px) and (width >= 375px) {
 	.decorated-zone::after {
 		right: 0px;
-		top: 10px;
+		top: 9px;
 	}
 }
 
@@ -234,7 +254,6 @@
 .main {
 	padding: 0 20px;
 	margin: 64px 0;
-	margin-bottom: 61px;
 	display: flex;
 	flex-direction: column;
 	gap: 80px;
@@ -242,7 +261,7 @@
 
 @media (width < 1024px) and (width >= 768px) {
 	.main {
-		margin: 67px 0;
+		margin: 68px 0 64px;
 	}
 }
 
@@ -512,7 +531,6 @@
 	grid-column: 2;
 	grid-row: 2;
 	justify-self: center;
-	min-height: 36vh;
 }
 
 @media (width < 1024px) and (width >= 375px) {
